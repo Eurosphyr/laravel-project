@@ -42,6 +42,5 @@ Route::post(
 );
 Route::post(
     '/contato',
-    ['uses'
-    => 'App\Http\Controllers\ContatoController@index']
+    ['uses' => 'App\Http\Controllers\ContatoController@index']
 );

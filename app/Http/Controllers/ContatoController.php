@@ -6,10 +6,13 @@ use Illuminate\Http\Request;
 
 class ContatoController extends Controller
 {
-    public function index(Request $req)
+    public function index()
     {
-        //return view("contato");
-        //return "Estou no controle !!";
-        dd($req);
+        $contatos = [
+            ["tema" => "Interface acessivel", "titulo" => "App mobile com direitos da pessoa deficiente"],
+            ["tema" => "Pedofilia", "titulo" => "App mobile com orientações gerais aos pais"]
+        ];
+
+        return view("contatos.index", compact('contatos'));
     }
 }
